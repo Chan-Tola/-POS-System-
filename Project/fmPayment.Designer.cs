@@ -48,8 +48,8 @@
             this.txtRemain = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtDP = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -244,13 +244,14 @@
             this.btnPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.Image = ((System.Drawing.Image)(resources.GetObject("btnPay.Image")));
             this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPay.Location = new System.Drawing.Point(175, 534);
+            this.btnPay.Location = new System.Drawing.Point(175, 500);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(140, 44);
             this.btnPay.TabIndex = 63;
             this.btnPay.Text = "Payment";
             this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPay.UseVisualStyleBackColor = true;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // txtRemain
             // 
@@ -288,16 +289,6 @@
             this.panel1.Size = new System.Drawing.Size(489, 584);
             this.panel1.TabIndex = 67;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(491, 584);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // txtDP
             // 
             this.txtDP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -308,6 +299,16 @@
             this.txtDP.Size = new System.Drawing.Size(117, 33);
             this.txtDP.TabIndex = 1;
             this.txtDP.Leave += new System.EventHandler(this.txtDP_Leave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-3, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(491, 584);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // fmPayment
             // 

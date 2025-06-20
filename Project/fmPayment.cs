@@ -61,6 +61,29 @@ namespace Project
             txtRemain.Text = string.Format("{0:c}", decimal.Parse(r.ToString()));
         }
 
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            com = new SqlCommand("spPayment", d.conn);
+            com.CommandType = CommandType.StoredProcedure;
+            com.Parameters.AddWithValue("@PD", dtp.Value);
+            com.Parameters.AddWithValue("@SI", cbStaffId.Text);
+            com.Parameters.AddWithValue("@FN", txtStaff.Text);
+            com.Parameters.AddWithValue("@IC", int.Parse(cbOC.SelectedValue.ToString()));
+
+            if (txtDP.ReadOnly == false)
+            {
+                com.Parameters.AddWithValue("@Dep", decimal.Parse(txtDP.Text, NumberStyles.Currency, CultureInfo.CurrentCulture.NumberFormat));
+            }
+            else
+            {
+                com.Parameters.AddWithValue("@Dep", decimal.Parse(txtRemain.Text, NumberStyles.Currency, CultureInfo.CurrentCulture.NumberFormat));
+            }
+            com.Parameters.AddWithValue("@A", decimal.Parse(txtTotal.Text, NumberStyles.Currency, CultureInfo.CurrentCulture.NumberFormat));
+            com.ExecuteNonQuery();
+
+            MessageBox.Show("Payment successfully");
+        }
+
         private void cbOC_SelectionChangeCommitted(object sender, EventArgs e)
         {
             com = new SqlCommand("spGetPayment", d.conn);
@@ -89,6 +112,7 @@ namespace Project
                 }
 
             }
+            dr.Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
