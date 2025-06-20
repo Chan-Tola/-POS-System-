@@ -41,15 +41,15 @@
             this.txtCPY = new System.Windows.Forms.TextBox();
             this.cbOC = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtDP = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.txtTotal = new System.Windows.Forms.Label();
+            this.la2 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.la1 = new System.Windows.Forms.Label();
             this.btnPay = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtRemain = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtDP = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -126,6 +126,7 @@
             this.cbStaffId.Name = "cbStaffId";
             this.cbStaffId.Size = new System.Drawing.Size(113, 33);
             this.cbStaffId.TabIndex = 36;
+            this.cbStaffId.SelectionChangeCommitted += new System.EventHandler(this.cbStaffId_SelectionChangeCommitted);
             // 
             // label8
             // 
@@ -185,6 +186,7 @@
             this.cbOC.Name = "cbOC";
             this.cbOC.Size = new System.Drawing.Size(149, 33);
             this.cbOC.TabIndex = 57;
+            this.cbOC.SelectionChangeCommitted += new System.EventHandler(this.cbOC_SelectionChangeCommitted);
             // 
             // label2
             // 
@@ -198,42 +200,42 @@
             this.label2.TabIndex = 58;
             this.label2.Text = "Order Code";
             // 
-            // txtDP
+            // la2
             // 
-            this.txtDP.AutoSize = true;
-            this.txtDP.BackColor = System.Drawing.Color.Transparent;
-            this.txtDP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDP.Location = new System.Drawing.Point(214, 391);
-            this.txtDP.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.txtDP.Name = "txtDP";
-            this.txtDP.Size = new System.Drawing.Size(85, 25);
-            this.txtDP.TabIndex = 59;
-            this.txtDP.Text = "Deposit";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(28, 423);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(117, 33);
-            this.textBox3.TabIndex = 62;
+            this.la2.AutoSize = true;
+            this.la2.BackColor = System.Drawing.Color.Transparent;
+            this.la2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.la2.Location = new System.Drawing.Point(214, 391);
+            this.la2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.la2.Name = "la2";
+            this.la2.Size = new System.Drawing.Size(85, 25);
+            this.la2.TabIndex = 59;
+            this.la2.Text = "Deposit";
             // 
             // txtTotal
             // 
-            this.txtTotal.AutoSize = true;
-            this.txtTotal.BackColor = System.Drawing.Color.Transparent;
+            this.txtTotal.BackColor = System.Drawing.Color.White;
+            this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(50, 391);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.txtTotal.Location = new System.Drawing.Point(28, 423);
+            this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(60, 25);
-            this.txtTotal.TabIndex = 61;
-            this.txtTotal.Text = "Total";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(117, 33);
+            this.txtTotal.TabIndex = 62;
+            // 
+            // la1
+            // 
+            this.la1.AutoSize = true;
+            this.la1.BackColor = System.Drawing.Color.Transparent;
+            this.la1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.la1.Location = new System.Drawing.Point(50, 391);
+            this.la1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.la1.Name = "la1";
+            this.la1.Size = new System.Drawing.Size(60, 25);
+            this.la1.TabIndex = 61;
+            this.la1.Text = "Total";
             // 
             // btnPay
             // 
@@ -249,19 +251,6 @@
             this.btnPay.Text = "Payment";
             this.btnPay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPay.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(198, 423);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(117, 33);
-            this.textBox2.TabIndex = 64;
             // 
             // txtRemain
             // 
@@ -292,6 +281,7 @@
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtDP);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
@@ -308,6 +298,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // txtDP
+            // 
+            this.txtDP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDP.Location = new System.Drawing.Point(185, 410);
+            this.txtDP.Multiline = true;
+            this.txtDP.Name = "txtDP";
+            this.txtDP.Size = new System.Drawing.Size(117, 33);
+            this.txtDP.TabIndex = 1;
+            this.txtDP.Leave += new System.EventHandler(this.txtDP_Leave);
+            // 
             // fmPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,11 +318,10 @@
             this.ClientSize = new System.Drawing.Size(513, 608);
             this.Controls.Add(this.txtRemain);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnPay);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.txtTotal);
-            this.Controls.Add(this.txtDP);
+            this.Controls.Add(this.la1);
+            this.Controls.Add(this.la2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbOC);
             this.Controls.Add(this.txtCPY);
@@ -339,7 +339,9 @@
             this.Name = "fmPayment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmPayment";
+            this.Load += new System.EventHandler(this.fmPayment_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -360,14 +362,14 @@
         private System.Windows.Forms.TextBox txtCPY;
         private System.Windows.Forms.ComboBox cbOC;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label txtDP;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label txtTotal;
+        private System.Windows.Forms.Label la2;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Label la1;
         private System.Windows.Forms.Button btnPay;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox txtRemain;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtDP;
     }
 }
