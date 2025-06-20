@@ -12,6 +12,7 @@ namespace Project
 {
     public partial class fmPayment : Form
     {
+        A6 d = new A6();
         public fmPayment()
         {
             InitializeComponent();
